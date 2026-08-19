@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+    <link rel="stylesheet" href="signIn.css">
+</head>
+<body>
+  <div class="page-container">
+    <div class="signin-card">
+      
+      <div class="logo-container">
+        <img src="signInLogo.png" alt="Sign In" class="logo-img">
+      </div>
+      
+      <p class="subtitle">Please enter your Username and password!</p>
+
+      <form class="signin-form">
+        <div class="input-group">
+          <label class="form-label" for="typeUsername">Username</label>
+          <input type="text" id="typeUsername" class="form-input"  required autocomplete="off"/>
+        </div>
+        <div class="input-group">
+           <label class="form-label" for="typePassword">Password</label>
+          <input type="password" id="typePassword" class="form-input" required />
+        </div>
+        <div class="button-group">
+          <button class="btn btn-primary" type="button" onclick="signIn()">Sign In</button>
+          <a href="signUp.html" class="btn btn-secondary">Sign Up</a>
+        </div>
+      </form>
+    </div>
+    <footer class="site-footer">
+      <p>&copy; <span id="current-year"> </span>  Your Company. All rights reserved.</p>
+    </footer>
+  </div>
+
+  <script src="userValidation.js"> </script>
+</body>
+</html>
