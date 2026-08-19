@@ -1,0 +1,88 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    display: flex;
+    justify-content: center; 
+    align-items: center;     
+    background-color: #f4f4f4; 
+}
+
+.login {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 400px; 
+}
+
+.logo {
+    text-align: center;
+    padding: 20px;
+}
+
+.form_ > form > div {
+    display:flex;
+    align-items: center;
+    padding: 10px 0px; 
+}
+
+.form_>form>div>label{
+    font-weight: bold;
+    width: 150px;
+    flex-shrink: 0;
+}
+.form_>form>div>input{
+    flex-grow: 1;
+    padding:4px;
+    border:1px solid black;
+    border-radius: 4px;
+}
+.buttons{
+    margin-top:20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap:10px;
+}
+.form_ >form >div>label{
+    font-weight: bold;
+
+}
+img{
+    height:100px;
+    width:80px;
+    border-radius:50%;
+    border:2px solid black
+}
+.footer{
+    text-align: center;
+    margin-top:20px;
+    font-weight:bold;
+}
+button{
+    height:30px;
+    width:100px;
+    transition:0.5s;
+}
+button:hover{
+    transform:scale(1.1);
+    background-color:grey;
+    color:white
+}
+input{
+    transition:0.5s;
+}
+label{
+    transition:0.5s;
+}
+input:focus{
+    transform: scale(1.1);
+
+}
+label:has(+input:focus){
+    transform: scale(1.1);
+}

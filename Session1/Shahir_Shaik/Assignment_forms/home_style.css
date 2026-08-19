@@ -1,0 +1,24 @@
+body{
+    margin:0px;
+    height:100vh;
+}
+.username{
+    font-weight: bold;
+    font-size: 20px;
+    padding:50px;
+}
+.navbar{
+    display: flex;
+    flex-direction: row;
+    gap:20px;
+    justify-content: center;
+    align-items: center;
+    background-color:grey;
+    height:10%;
+
+}
+div[class='navbar']>div{
+    font-weight:bold;
+    font-size:20px;
+   
+}

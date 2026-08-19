@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="menubar">
+        <div class="logo">logo</div>
+        <div class="item1">Item1</div>
+        <div class="item2">Item2</div>
+        <div class="item3">item3</div>
+    </div>
+    <div class="slider">
+       <img id="image" src='image_1.jpeg' alt="image not found!">
+       <button id='prev' name='prev'>Prev</button>
+       <button id="next" name="next">Next</button>
+    </div>
+    <div class="static">
+        <div id="matter" class="matter">A carousel is a common component used to display multiple images in a small area.
+It allows users to view different images without leaving the current page.
+The previous and next buttons help users move between the images.
+HTML is used to create the structure of the carousel.
+CSS is used to arrange the buttons and images properly.
+The `display: flex` property helps place the images in a horizontal row.
+The `overflow: hidden` property hides images outside the visible window.
+JavaScript changes the position of the image container when a button is clicked.
+The `translateX()` function moves the images left or right.
+Together, HTML, CSS, and JavaScript create a simple and interactive carousel.
+</div>
+        <img id='image_static' class="image" src="image_1.jpeg">
+    </div>
+
+     <div class="carousel">
+
+        <button id="prev_1">←</button>
+
+        <div class="window">
+            <div id="images">
+                <img src="image_1.jpeg">
+                <img src="image_2.jpeg">
+                <img src="image_3.jpeg">
+            </div>
+        </div>
+
+        <button id="next_1">→</button>
+
+    </div>
+<div class="footer">
+    <div class="message">Thanks for visiting!</div>
+    <div id="time"></div>
+
+</div>
+    <script src="script.js"></script>
+</body>
+</html>
