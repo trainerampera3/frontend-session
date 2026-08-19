@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Amazon Services</title>
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+    <script>
+        const isLoggedIn = localStorage.getItem('isLoggedIn');
+
+        if(isLoggedIn !== 'true'){
+            window.location.href = './index.html'
+        }
+    </script>
+    <link rel="stylesheet" href="./styles/home.css">
+</head>
+
+<body>
+
+
+
+    <div class="container navbar-container">
+
+        <nav class="navbar navbar-expand-lg">
+
+            <div class="container-fluid">
+
+                <a class="navbar-brand" href="#">
+                    <img
+                        src="https://www.svgrepo.com/show/112049/amazon-logo.svg"
+                        alt="Amazon Logo"
+                        width="35"
+                        height="30"
+                    >
+                </a>
+
+                <span class="logo-text">
+                    Amazon Services
+                </span>
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+        
+                <div
+                    class="collapse navbar-collapse justify-content-end"
+                    id="navbarNav"
+                >
+
+                    <ul class="navbar-nav">
+
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">
+                                Home
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#services">
+                                Services
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about">
+                                About
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">
+                                Contact
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </nav>
+
+    </div>
+
+
+    <main class="main-content">
+
+
+        <section class="welcome-section">
+
+            <h1>
+                Welcome to Amazon Services
+            </h1>
+
+            <p>
+                Amazon Services provides powerful cloud,
+                storage, computing and database solutions
+                for modern applications.
+            </p>
+
+            <p>
+                Explore our services and learn how they
+                can help you build scalable applications.
+            </p>
+
+        </section>
+
+
+
+        <section id="services">
+
+            <h2 class="section-title">
+                Our Services
+            </h2>
+
+            <div class="row g-4">
+
+                <div class="col-md-4">
+
+                    <div class="service-card">
+
+                        <h4>
+                            EC2
+                        </h4>
+
+                        <p>
+                            Elastic Compute Cloud provides
+                            scalable computing capacity.
+                        </p>
+
+                        <button class="btn btn-dark">
+                            Learn More
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="col-md-4">
+
+                    <div class="service-card">
+
+                        <h4>
+                            S3
+                        </h4>
+
+                        <p>
+                            Simple Storage Service provides
+                            secure object storage.
+                        </p>
+
+                        <button class="btn btn-dark">
+                            Learn More
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="col-md-4">
+
+                    <div class="service-card">
+
+                        <h4>
+                            RDS
+                        </h4>
+
+                        <p>
+                            Relational Database Service makes
+                            database management easier.
+                        </p>
+
+                        <button class="btn btn-dark">
+                            Learn More
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- <section
+            id="about"
+            class="content-section"
+        >
+
+            <h2>
+                About Us
+            </h2>
+
+            <p>
+                We provide technology solutions that help
+                developers and businesses build modern
+                applications.
+            </p>
+
+        </section>
+
+
+
+        <section
+            id="contact"
+            class="content-section"
+        >
+
+            <h2>
+                Contact Us
+            </h2>
+
+            <p>
+                Email: support@example.com
+            </p>
+
+            <button class="btn btn-warning">
+                Contact Support
+            </button>
+
+        </section> -->
+
+    </main>
+
+
+    <!-- <aside
+        class="sidebar"
+        id="sidebar"
+    >
+
+        <span
+            class="close-button"
+            id="closeButton"
+        >
+            X
+        </span>
+
+        <header class="sidebar-header">
+            Amazon Services
+        </header>
+
+        <ul class="list-options">
+
+            <li class="options">
+                Home
+            </li>
+
+            <li class="options">
+                Courses
+            </li>
+
+            <li class="options">
+                Services
+            </li>
+
+            <li class="options">
+                About Us
+            </li>
+
+            <li class="options">
+                Contact
+            </li>
+
+        </ul>
+
+    </aside> -->
+
+
+    <button
+        class="open-button"
+        id="openButton"
+    >
+        Open Sidebar
+    </button>
+
+
+    <footer>
+
+        <h4>
+            Amazon Services
+        </h4>
+
+        <p>
+            Building modern web applications.
+        </p>
+
+        <p>
+            © 2026 Amazon Services. All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+
+    <script src="./scripts/home.js"></script>
+
+</body>
+
+</html>

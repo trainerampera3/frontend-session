@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-Up</title>
+    <link rel="stylesheet" href="../styles/signup.css">
+</head>
+<body>
+    <div class="container">
+        <form id="signupForm" class="auth-form" novalidate>
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSVNLH1I8DbPVU191rfYUBBtNswR82qiki7dhX0WDNtw&s=10" width="100" height="100" alt="" srcset="">
+
+
+            <div class="input-group">
+                <label for="signupName">Full Name</label>
+                <input type="text" id="signupName" required>
+                <span class="error-message" id="signupNameError"></span>
+            </div>
+            
+            <div class="input-group">
+                <label for="signupEmail">Email <span class="required">*</span></label>
+                <input type="email" id="signupEmail" required>
+                <span class="error-message" id="signupEmailError"></span>
+            </div>
+
+            <div class="input-group">
+                <label for="signupPassword">Password <span class="required">*</span></label>
+                <input type="password" id="signupPassword" required>
+                <span class="error-message" id="signupPasswordError"></span>
+            </div>
+
+            <div class="input-group">
+                <label for="signupConfirmPassword">Confirm Password <span class="required">*</span></label>
+                <input type="password" id="signupConfirmPassword" required>
+                <span class="error-message" id="signupConfirmPasswordError"></span>
+            </div>
+
+            <div class="auth-options">
+                <label for="Sign-Up" onclick="window.location.href='./index.html'" class="navigation">Already have an account?</label>
+
+            <button type="submit">Sign-Up</button>
+            </div>
+        </form>
+    </div>
+</body>
+<script src="/scripts/test.js"></script>
+</html>
