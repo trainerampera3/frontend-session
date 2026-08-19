@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <style>
+        .button{
+            position: absolute;
+            left:30vw
+        }
+        .error{
+            color: red;
+            margin-top: 7px;
+        }
+    </style>
+    
+</head>
+<body>
+   <center><h2>Sign up</h2></center> 
+   <br><br><br><br>
+    <form class="form-horizontal" id="form">
+        <div class='form-group'>
+            <label class="control-label col-sm-2" for="name">Name: </label>
+            <div class="col-sm-5">
+                <input type="text" class="form-control" id="name" placeholder="your name" name="Name" autofocus required>
+                <div id="name-er" class="error" ></div>
+            </div>
+            
+        </div>
+        
+        <div class='form-group'>
+            <label class="control-label col-sm-2" for="username">Username:  </label>
+            <div class="col-sm-5">
+                <input type="text" class="form-control" id="username" placeholder="username" name="username" required>
+            <div id="uname-er" class="error"></div>
+            </div>
+            
+        </div>
+        <div class='form-group'>
+            <label class="control-label col-sm-2" for="email">Email: </label>
+            <div class="col-sm-5">
+                <input type="email" class="form-control" id="email" placeholder="abc@gmail.com" name="email" required>
+            <div id="mail-er" class="error" ></div>
+            </div>
+            
+        </div>
+        <div class='form-group'>
+            <label class="control-label col-sm-2" for="password">Password: </label>
+            <div class="col-sm-5">
+                <input type="password" class="form-control" id="password" placeholder="" name="password" required>
+            <div id="pass-er" class="error"></div>
+            </div>
+            
+        </div>
+        <div class='form-group'>
+            <label class="control-label col-sm-2" for="cpassword">Confirm Password: </label>
+            <div class="col-sm-5">
+                <input type="password" class="form-control"  id="cpassword" placeholder="" name="cpassword" required>
+            <div id="cpass-er" class="error"></div>
+            </div>
+            
+        </div>
+        
+        <div class="button">
+        <button type="submit" class="btn btn-success" >Submit</button>
+        <button type="reset" class="btn btn-warning" id="reset">Clear</button>
+        <button type="button" id="cancel" class="btn btn-danger"> Cancel</button>
+        </div>
+    </form>
+
+    <script src ='reg.js'></script>
+    
+
+
+</body>
+</html>
