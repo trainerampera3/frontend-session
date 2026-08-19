@@ -1,0 +1,91 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    display: flex;
+    justify-content: center; 
+    align-items: center;     
+    background-color: #f4f4f4;
+}
+
+.signup {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 500px; 
+}
+.logo {
+    text-align: center;
+    padding: 20px;
+}
+
+.form_ > form > div {
+    display: flex;
+    align-items: center;   
+    padding: 10px 0;
+}
+
+.form_ > form > div > label {
+    font-weight: bold;
+    width: 200px;         
+    flex-shrink: 0;      
+}
+
+
+.form_ > form > div > input {
+    flex-grow: 1;          
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap:10px
+}
+
+.form_ >form >div>label{
+    font-weight: bold;
+   
+
+}
+.logo{
+    font-weight: bold;
+}
+button{
+    height:30px;
+    width:60px;
+    transition: 0.5s;
+
+}
+button:hover{
+    transform: scale(1.1);
+    background-color:grey;
+    color:white;
+
+}
+img{
+    height:100px;
+    width:80px;
+    border-radius:50%;
+    border:2px solid black
+}
+label{
+    transition: 0.5s;
+}
+input{
+    transition:0.5s;
+}
+input:focus{
+    transform: scale(1.1);
+
+}
+label:has(+input:focus){
+    transform: scale(1.1);
+}

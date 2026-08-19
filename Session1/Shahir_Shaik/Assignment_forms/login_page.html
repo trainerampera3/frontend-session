@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="login">
+        <div class="logo"><img src="company.png"></i></div>
+        <div class="form_">
+            <form novalidate>
+                <div>
+                <label>Username:</label>
+                <input id="eusername"   type="text" required>
+                </div>
+                <div>
+                <label>Password:</label>
+                <input id="epassword"  type="password" required>
+                </div>
+            
+        </div>
+        <div class="buttons">
+        <button type="submit" sigin">Sigin</button>
+        <button type="button" class="signup">Signup</button>
+            </div>
+            </form>
+
+            <footer>
+             <p>&copy; <span id="year"></span>Google. All Rights Reserved.</p>
+        </footer>
+
+    <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+
+
+
+    </div>
+    <script src="login_script.js"></script>
+</body>
+</html>
