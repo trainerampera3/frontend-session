@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="signUp.css">
+</head>
+<body>
+  <div class="page-container">
+    <div class="signup-card">
+      
+      <div class="logo-container">
+        <img src="signInLogo.png" alt="Sign Up" class="logo-img">
+      </div>
+      
+      <p class="subtitle ">Create your account by filling in the details below!</p>
+
+      <form class="signup-form">
+        <div class="input-group">
+          <label class="form-label" for="regName">Name</label>
+          <input type="text" id="regName" class="form-input" placeholder="Your full name" required autocomplete="off"/>
+        </div>
+
+        
+        <div class="input-group">
+          <label class="form-label" for="regUserName">Username</label>
+          <input type="text" id="regUserName" class="form-input" placeholder="Choose a username" required  autocomplete="off"/>
+        </div>
+
+        
+        <div class="input-group">
+          <label class="form-label" for="regEmail">Email</label>
+          <input type="email" id="regEmail" class="form-input" placeholder="Enter your email" required autocomplete="off">  
+        </div>
+
+        
+        <div class="input-group">
+           <label class="form-label" for="regPassword">Password</label>
+          <input type="password" id="regPassword" class="form-input" placeholder="Enter password" required />
+        </div>
+
+        
+        <div class="input-group">
+           <label class="form-label" for="regConfirmPassword">Confirm Password</label>
+          <input type="password" id="regConfirmPassword" class="form-input" placeholder="Repeat password" required />
+        </div>
+
+        
+        <div class="button-group">
+          <button class="btn btn-primary" type="button" onclick="signUp()">Submit</button>
+          <button class="btn btn-secondary" type="reset">Clear</button>
+          <a href="signIn.html" class="btn btn-cancel">Cancel</a>
+        </div>
+      </form>
+      
+    </div>
+    <footer class="site-footer">
+      <p>&copy; <span id="current-year"> </span>  Your Company. All rights reserved.</p>
+    </footer>
+  </div>
+
+  <script src="userValidation.js"></script>
+
+</body>
+</html>
