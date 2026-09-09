@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        *{
+            margin: 10px;
+        }
+        .container{
+            display: grid;
+            grid-template-rows: 1fr 3fr;
+            background-color: blueviolet;
+            justify-content: center;
+            height: 100vh;
+            width: 100%;
+        }
+        .logo{
+            justify-self: center;
+            align-self:center;
+        }
+        form{
+            background-color: aqua;
+            height: 250px;
+            padding: 30px;
+            border-radius: 20px;
+        }
+
+        button{
+            all:unset;
+            border : 1px solid rgb(0, 128, 107);
+            height: 30px;
+            width:100px;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bold;
+            background-color: darkblue;
+            color:ivory;
+            border-radius: 10px;
+            padding: 5px 10px;
+            margin: 10px;
+        }
+
+        img{
+            border-radius: 20px;
+        }
+    
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <div class="logo"><img src='logo.avif' alt='logo' height="100px" width="100px"></div>
+        <div>
+    <form >
+        <label for="username">Username * : </label> &nbsp <input name ='username' type = 'text' required="required" maxlength="15" autofocus id="username"><br>
+        <label for="password">Password * : </label>  &nbsp <input name="password" type="password" required id="password"> 
+        <br>
+        <button type="submit" onclick="loginValid()">sing in</button>
+        <button type="button" id="signup">Sign up</button>
+    </form>
+    
+    </div>
+    </div>
+
+    <script>
+        function loginValid(){
+        let username = document.getElementById('username').value.trim()
+        let password = document.getElementById('password').value
+        if (username === "" || password === ""){
+            alert('values must not be empty');
+            return
+        }
+        let users = JSON.parse(localStorage.getItem('users')) || [];
+        console.log(users)
+        let unameExists = users.find(
+            user => 
+            user.username === username && 
+            user.pass === password
+        )
+
+        if(unameExists){
+            sessionStorage.setItem("users",username );
+            window.location.href='./home.html'
+            alert('Login successful');
+        }
+        else{
+            alert('Invalid Credenials')
+       }
+    }
+    let btn = document.getElementById('signup')
+    btn.addEventListener('click', () => {
+        window.location.href='./register.html'
+    })
+    </script>
+    
+</body>
+</html>
