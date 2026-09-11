@@ -1,0 +1,28 @@
+
+
+.product-card{
+    width:320px;
+    height: auto;
+    border-radius: 5%;
+    background-color: whitesmoke;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+
+.product-card:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    cursor: pointer; 
+
+
+}
+
+.product-image{
+    border-radius: 5%;
+    width: 320px;
+    height: 250px;
+}
+
+.product-content{
+    padding: 5px;
+}
