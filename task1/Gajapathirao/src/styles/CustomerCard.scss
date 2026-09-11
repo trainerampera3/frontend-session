@@ -1,52 +1,40 @@
 .customer-card {
-    background: white;
-    border-radius: 12px;
     padding: 20px;
-    width: 320px;
-
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-
-    h2 {
-        margin-top: 0;
-        margin-bottom: 15px;
-    }
-
-    p {
-        margin: 8px 0;
-    }
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: white;
 }
 
+.customer-card h2 {
+    margin-bottom: 15px;
+}
+
+.customer-card p {
+    margin: 8px 0;
+}
 
 .card-actions {
+    margin-top: 20px;
     display: flex;
     gap: 10px;
-    margin-top: 20px;
-
-    button {
-        padding: 9px 16px;
-        border: none;
-        border-radius: 6px;
-        cursor: pointer;
-        font-size: 14px;
-    }
 }
 
+.card-actions button {
+    padding: 8px 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.view-btn {
+    background: #eee;
+}
 
 .edit-btn {
-    background: #e8e8e8;
-
-    &:hover {
-        background: #d8d8d8;
-    }
+    background: #ddd;
 }
-
 
 .delete-btn {
-    background: #e8e8e8;
-
-    &:hover {
-        background: #d8d8d8;
-    }
+    background: #f44336;
+    color: white;
 }
-
-

@@ -10,6 +10,8 @@ import {
 import { useContext } from "react";
 import { CustomerContext } from "../context/CustomerContext";
 
+import '../styles/customerEdit.scss';
+
 
 export default function CustomerEdit() {
 

@@ -13,6 +13,7 @@ import {
     CustomerContext
 } from "../context/CustomerContext";
 
+import '../styles/customerDetail.scss';
 
 export default function CustomerDetails() {
 
