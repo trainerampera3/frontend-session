@@ -1,0 +1,32 @@
+table{
+  border:2px solid rgb(0, 162, 255);
+  border-radius: 20px;
+  margin-bottom: 10px;
+  padding: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+thead, tr{
+  border-bottom: 2px solid rgb(255, 56, 89);
+}
+
+td, th, tr{
+  padding: 10px;
+  text-align: center;
+  background-color: linear;
+  border-radius: 10px;
+}
+
+tbody{
+  background-color: darksalmon;
+}
+
+thead{
+  background-color: rgb(255, 208, 0);
+  
+}
+
+table{
+  background-color:rgb(142, 223, 226);
+}
