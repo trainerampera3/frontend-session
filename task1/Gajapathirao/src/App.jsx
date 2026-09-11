@@ -1,19 +1,59 @@
-import React from "react"
-import { useState } from "react";
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { BrowserRouter, Routes, Route, Navigate } from "react-router";
+
 import KPICards from "./Component/KPICards";
+import CustomerDetails from "./Component/CustomerDetails";
+import CustomerEdit from "./Component/CustomerEdit";
+import NotFound from "./Component/NotFound";
 
-const queryClient = new QueryClient();
+import CustomerProvider from "./context/CustomerContext";
 
+export default function App() {
+    return (
 
-function App() {
-  const [count, setCount] = useState(0)
+        <CustomerProvider>
+        
+        <BrowserRouter>
 
-  return (
-    <QueryClientProvider client={queryClient}>
-    <KPICards></KPICards>
-    </QueryClientProvider>
-  )
+            <Routes>
+
+           
+                <Route
+                    path="/customers"
+                    element={<KPICards/>}
+                />
+
+             
+                <Route
+                    path="/customers/:id"
+                    element={<CustomerDetails />}
+                />
+
+               
+                <Route
+                    path="/customers/:id/edit"
+                    element={<CustomerEdit />}
+                />
+
+                
+                <Route
+                    path="/"
+                    element={
+                        <Navigate
+                            to="/customers"
+                            replace
+                        />
+                    }
+                />
+
+               
+                <Route
+                    path="*"
+                    element={<NotFound />}
+                />
+
+            </Routes>
+
+        </BrowserRouter>
+        </CustomerProvider>
+    );
 }
-
-export default App

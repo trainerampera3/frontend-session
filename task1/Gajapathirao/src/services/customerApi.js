@@ -1,4 +1,4 @@
-import api from './axios';
+import api from "./axios";
 
 
 export async function getCustomers() {
@@ -9,7 +9,20 @@ export async function getCustomers() {
 }
 
 
-export async function updateCustomer(customerId, customerData) {
+export async function getCustomer(customerId) {
+
+    const response = await api.get(
+        `/customers/${customerId}`
+    );
+
+    return response.data;
+}
+
+
+export async function updateCustomer(
+    customerId,
+    customerData
+) {
 
     const response = await api.put(
         `/customers/${customerId}`,
