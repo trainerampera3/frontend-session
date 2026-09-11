@@ -1,6 +1,7 @@
 import React, {
     useEffect,
-    useState
+    useState,
+    useContext
 } from "react";
 
 import {
@@ -9,8 +10,8 @@ import {
 } from "react-router";
 
 import {
-    getCustomer
-} from "../services/customerApi.js";
+    CustomerContext
+} from "../context/CustomerContext";
 
 
 export default function CustomerDetails() {
@@ -20,11 +21,19 @@ export default function CustomerDetails() {
     const navigate = useNavigate();
 
 
-    const [customer, setCustomer] = useState(null);
+    const {
+        getCustomer
+    } = useContext(CustomerContext);
 
-    const [loading, setLoading] = useState(true);
 
-    const [error, setError] = useState("");
+    const [customer, setCustomer] =
+        useState(null);
+
+    const [loading, setLoading] =
+        useState(true);
+
+    const [error, setError] =
+        useState("");
 
 
     useEffect(() => {
@@ -33,7 +42,14 @@ export default function CustomerDetails() {
 
             try {
 
-                const data = await getCustomer(id);
+                setLoading(true);
+
+                setError("");
+
+
+                const data =
+                    await getCustomer(id);
+
 
                 setCustomer(data);
 
@@ -54,6 +70,7 @@ export default function CustomerDetails() {
             }
 
         }
+
 
         loadCustomer();
 

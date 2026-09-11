@@ -59,7 +59,7 @@ export default function useCustomers() {
             const customer =
                 await getCustomerApi(customerId);
 
-            return customer;
+            return customer.data;
 
         } catch (error) {
 

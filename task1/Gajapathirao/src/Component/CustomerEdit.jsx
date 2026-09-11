@@ -7,8 +7,8 @@ import {
     useParams,
     useNavigate
 } from "react-router";
-
-import useCustomers from "../hooks/useCustomer";
+import { useContext } from "react";
+import { CustomerContext } from "../context/CustomerContext";
 
 
 export default function CustomerEdit() {
@@ -18,10 +18,10 @@ export default function CustomerEdit() {
     const navigate = useNavigate();
 
 
-    const {
-        getCustomer,
-        updateCustomer
-    } = useCustomers();
+const {
+    getCustomer,
+    updateCustomer
+} = useContext(CustomerContext);
 
 
     const [loading, setLoading] =
