@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { getCustomers } from '../services/customerApi.js';
+import { getCustomers ,  updateCustomer,
+    deleteCustomer } from '../services/customerApi.js';
 
 import CustomerCard from './CustomerCard.jsx';
 
@@ -28,7 +29,54 @@ useEffect(()=>{
   }
 
   loadCustomers();
+
 },[])
+
+async function handleDelete(customerId) {
+
+    try {
+
+        await deleteCustomer(customerId);
+
+        setCustomers(prevCustomers =>
+            prevCustomers.filter(
+                customer => customer.customer_id !== customerId
+            )
+        );
+
+    } catch (error) {
+
+        console.log(error);
+        setError("Failed to delete customer");
+
+    }
+}
+
+
+  async function handleUpdate(customerId, customerData) {
+
+    try {
+
+        await updateCustomer(customerId, customerData);
+
+        setCustomers(prevCustomers =>
+            prevCustomers.map(customer =>
+                customer.customer_id === customerId
+                    ? {
+                        ...customer,
+                        ...customerData
+                    }
+                    : customer
+            )
+        );
+
+    } catch (error) {
+
+        console.log(error);
+        setError("Failed to update customer");
+
+    }
+}
   if (loading) return <div>Loading...</div>;
   if (error) return <div>An error occurred: {error.message}</div>;
 
@@ -38,10 +86,12 @@ useEffect(()=>{
         <h1>Customers</h1>
       <div className="cards">
         {customers.map(customer => 
-          ( <CustomerCard 
-          key={customer.customer_id} 
-          customer={customer} 
-          /> ))}
+          ( <CustomerCard
+    key={customer.customer_id}
+    customer={customer}
+    onUpdate={handleUpdate}
+    onDelete={handleDelete}
+/> ))}
       </div>
       </div>
     </>
