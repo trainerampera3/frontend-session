@@ -1,5 +1,6 @@
 
 
+
 .product-card{
     width:320px;
     height: auto;
@@ -25,4 +26,27 @@
 
 .product-content{
     padding: 5px;
+}
+
+
+.customer-card, .store-card, .order-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    margin: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    background-color: whitesmoke;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.customer-card:hover, .store-card:hover, .order-card:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    cursor: pointer; 
+
+
+}
+
+.customer-info p, .store-info p, .order-info p {
+    margin: 6px 0;
 }
