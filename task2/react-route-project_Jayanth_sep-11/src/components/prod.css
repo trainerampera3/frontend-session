@@ -1,0 +1,42 @@
+/* .container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows:1fr 1fr 1fr 1fr;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+}
+
+.product-card{
+    height: 40vh;
+}
+
+.img-con{
+    height: 20vh;
+}
+
+.nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position:-webkit-sticky;
+}
+
+.nav-items{
+    text-decoration: none;
+    color:aliceblue;
+    background-color:purple;
+}
+
+
+.head, .row{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+.rbody{
+    display: flex;
+    flex-direction: column;
+} */
