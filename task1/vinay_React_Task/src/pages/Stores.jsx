@@ -2,6 +2,7 @@ import { useState , useEffect } from "react";
 import axios from 'axios'
 
 import StoreCard from "../components/StoreCard"
+import CardModal from "../components/CardModal";
 
 import '../styles/Products.css'
 
@@ -11,8 +12,6 @@ function Stores(){
         const [stores, setStores] = useState([]);
         const[error, setError] = useState(null);
     
-        
-
 
         useEffect(() =>{
             const fetchStores = async () =>{
@@ -31,6 +30,9 @@ function Stores(){
         if(error)
             return <p>Error : {error}</p>
 
+
+        
+
     return(
         <div className="stores-container">
             <h1>Stores</h1>
@@ -41,6 +43,7 @@ function Stores(){
                 ))
             }
             </div>
+            <CardModal />
         </div>
     )
 }

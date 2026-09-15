@@ -2,6 +2,7 @@ import { useState , useEffect } from "react";
 import axios from 'axios'
 
 import OrderCard from "../components/OrderCard"
+import CardModal from "../components/CardModal";
 
 import '../styles/Products.css'
 
@@ -42,6 +43,8 @@ function Orders(){
                 ))
             }
             </div>
+
+            <CardModal />
         </div>
     )
 }
