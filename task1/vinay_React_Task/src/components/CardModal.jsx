@@ -8,7 +8,7 @@ function CardModal() {
     if (!selectedCard) return null;
 
     return (
-        <div className="modal-overlay">
+        <div className="modal-card">
             <div className="modal">
                 <button className="close-button" onClick={closeCard}>
                     X
@@ -16,10 +16,12 @@ function CardModal() {
 
                 <h2>Details</h2>
 
-                {Object.entries(selectedCard).map(([key, value]) => (
+                {Object.entries(selectedCard).map(([key, value]) => 
+                    key != 'password'  && key != 'customer_id' && (
                     <p key={key}>
                         <strong>{key} :</strong> {String(value)}
                     </p>
+                    
                 ))}
             </div>
         </div>

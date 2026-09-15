@@ -1,5 +1,4 @@
-
-
+ /**/
 
 .product-card{
     width:320px;
@@ -29,6 +28,9 @@
 }
 
 
+
+/* cards css */
+
 .customer-card, .store-card, .order-card {
     border: 1px solid #ddd;
     border-radius: 8px;
@@ -41,12 +43,26 @@
 
 .customer-card:hover, .store-card:hover, .order-card:hover {
     transform: scale(1.05); 
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-    cursor: pointer; 
-
-
+    border: 2px solid rgb(114, 114, 219);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15), 
+                0 0 12px 4px rgba(114, 114, 219, 0.5); 
 }
+
 
 .customer-info p, .store-info p, .order-info p {
     margin: 6px 0;
+}
+
+.customer-operations , .order-operations , .store-operations {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-top: 5px;
+} 
+
+.customer-operations button , .order-operations button, .store-operations button {
+    padding: 3px;
+    cursor: pointer; 
+    width: auto;
+    height: 30px;
 }
