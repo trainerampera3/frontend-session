@@ -4,7 +4,7 @@ import axios from 'axios'
 import OrderCard from "../components/OrderCard"
 import CardModal from "../components/CardModal";
 
-import '../styles/Products.css'
+import '../styles/Cards.css'
 
 function Orders(){
 
@@ -27,7 +27,49 @@ function Orders(){
                 }
             };fetchOrders
             ();
-    },[] );
+        },[] );
+
+        const updateOrder = async (orderId, data) => {
+            try{
+                await axios.patch(
+                    `http://127.0.0.1:8000/orders/${orderId}`,
+                    data
+                );
+
+                setOrders((prevOrders) =>
+                    prevOrders.map((order) =>
+                        order.order_id === orderId
+                            ? { ...order, ...data ,updated_at: new Date().toISOString()}
+                            : order
+                    )
+                );
+
+                return { success: true };
+            }
+            catch(error){
+                return {
+                    success: false,
+                    message: error.response?.data?.error || "Failed to update order"
+                };
+            }
+        };
+
+
+
+        const deleteOrder = async (orderId) => {
+            try {
+                await axios.delete(`http://127.0.0.1:8000/orders/${orderId}`);
+
+                setOrders((prevOrders) =>
+                    prevOrders.filter((order) => order.order_id !== orderId)
+                );
+            }
+            catch(error){
+                alert("Cannot delete this order because it is referenced by another record.");
+                console.log(error);
+            }
+        };
+            
 
     
         if(error)
@@ -39,7 +81,7 @@ function Orders(){
             <div className="orders-grid">
                 {
                 orders.map((order) =>(
-                    <OrderCard key = {order.order_id} order = {order} />
+                    <OrderCard key = {order.order_id} order = {order} onUpdate={updateOrder} onDelete={deleteOrder}/>
                 ))
             }
             </div>

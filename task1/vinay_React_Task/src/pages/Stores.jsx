@@ -4,7 +4,7 @@ import axios from 'axios'
 import StoreCard from "../components/StoreCard"
 import CardModal from "../components/CardModal";
 
-import '../styles/Products.css'
+import '../styles/Cards.css'
 
 
 function Stores(){

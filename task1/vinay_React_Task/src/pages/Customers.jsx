@@ -3,7 +3,7 @@ import axios from 'axios'
 
 import CustomerCard from "../components/CustomerCard"
 import CardModal from "../components/CardModal";
-import '../styles/Products.css'
+import '../styles/Cards.css'
 
 
 

@@ -1,5 +1,26 @@
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Georgia, serif;
+    color: #2f3542;
+    background: #f7f7f5;
+}
+
+#root {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer {
+    padding: 18px;
+    text-align: center;
+    background: #1f2a3d;
+    color: white;
+    font-size: 14px;
+    margin-top: auto;
 }
