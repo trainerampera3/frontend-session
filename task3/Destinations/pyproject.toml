@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "destinations"
+version = "0.1.0"
+description = ""
+authors = ["Pushpaampera <pushpa.siyyadri@amperatech.ai>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+psycopg = "^3.3.6"
+fastapi = "^0.141.1"
+uvicorn = "^0.53.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

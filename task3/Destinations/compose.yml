@@ -1,0 +1,35 @@
+services:
+  frontend:
+    build: ./frontend
+    container_name: destinations-frontend
+    ports:
+      - "5173:5173"
+    depends_on:
+      - backend
+
+  backend:
+    build: ./backend
+    container_name: destinations-backend
+    ports:
+      - "8001:8000"
+    environment:
+      DB_HOST: postgres
+      DB_PORT: 5432
+      DB_NAME: destinations_db
+      DB_USER: pushpa
+      DB_PASSWORD: pushpa
+    depends_on:
+      - postgres
+
+  postgres:
+    image: postgres:16
+    container_name: destinations-postgres
+    environment:
+      POSTGRES_DB: destinations_db
+      POSTGRES_USER: pushpa
+      POSTGRES_PASSWORD: pushpa
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
