@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "backend"
+version = "0.1.0"
+description = ""
+authors = ["k.jayanth@10 <Jayanth.korukonda@amperatech.ai>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+fastapi = "^0.141.1"
+uvicorn = "^0.53.0"
+psycopg = "^3.3.5"
+dotenv = "^0.9.9"
+pwdlib = {extras = ["argon2"], version = "^0.3.1"}
+datetime = "^6.0"
+pyjwt = "^2.14.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
